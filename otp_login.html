@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Login Page</title>  
+    <style>
+        body
+        {
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <input type="text" name="" id="user" placeholder="Enter the username:">
+    <br><br>
+    <input type="password" name="" id="pass" placeholder="Enter the password:">
+    <br><br>
+    <button onclick="getAccess()">Login</button>
+    <h1 id="msg"></h1>
+    </center>
+    
+    <script>
+        let user=document.getElementById("user");
+        let pass=document.getElementById("pass");
+        let username="admin";
+        let password="admin@123";
+        let msg=document.getElementById("msg");
+        let otp;
+    function getAccess()
+    {
+        if(username==user.value && password==pass.value)
+        {
+          alert("Login Successfully");
+        }
+        else
+        {
+            msg.innerHTML=`<input type="text" id="mail" placeholder="Enter the Email"> 
+                    <button onclick="getOtp()">Get OTP</button>`;
+        }
+    }
+    function getOtp()
+    {
+       let o=alert("OTP"+(Math.ceil(Math.random()*10000)));
+       let ot=msg.innerHTML=`<input type="text" id="no" placeholder="Enter the OTP">
+       <button onclick="getSubmit()">Submit</button>`;
+       
+    }
+    function getSubmit()
+    {
+   otp.innerHTML=("Login SuccessFully..!!");
+    }
+    </script>
+    
+</body>
+</html>

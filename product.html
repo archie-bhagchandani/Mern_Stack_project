@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./product_style.css">
+</head>
+<body>  
+  <div id="bg">   
+        <!-- <button>Account</button>
+        <button>Wishlist</button>
+        <button>Cart</button>
+        <input type="text" id=""> -->
+    <div id="navbar">
+        <button><b>Account</b></button>
+        <button><b>Wishlist</b></button>
+        <button><b>Cart</b></button>
+        <br><br>
+        <input type="text" id="search_bar" placeholder="Enter the Product to Search:">
+    </div>
+    <center>
+    <div id ="card1">
+        <img src="./appl.jpg" alt="App" ></img>
+      <button id =" " onclick="getProduct()">
+        <b>Show the Products</b></button>
+         <img src="./book.jfif" alt="book">
+        <button onclick="getBook()"><b>Show the books</b></button>
+    </center>
+    </div>
+  <div id="container"></div>
+    </center>
+  </div>
+<script>
+    let products=[
+    {
+        pname:"Watch",
+        cname:"Noise",
+        price:4000,
+        img1:"watch.webp"
+    },
+    {
+         pname:"TV",
+        cname:"Mi",
+        price:40000,
+        img1:"tv.webp"
+    },
+    {
+        pname:"Laptpo",
+        cname:"Lenovi",
+        price:80000,
+        img1:"laptop.webp"
+    },
+    {
+        pname:"Pad",
+        cname:"samsung",
+        price:35000,
+        img1:"pad.jfif"
+    }]
+    let books=[
+        {
+            bname:"Wings of Fire",
+            aname:"APJ Abdul Kalam",
+            bprice:300,
+            img2:"b1.jfif"
+        },
+        {
+            bname:"Ikiga",
+            aname:"JK",
+            bprice:600,
+            img2:"b2.jfif"
+        },
+        {
+            bname:"Rich Dad Poor Dad",
+            aname:"Robert T. Kiyosaki",
+            bprice:450,
+            img2:"b3.jfif"
+        },
+        {
+            bname:"The Psychology of money ",
+            aname:"Morgan Housel",
+            bprice:950,
+            img2:"b4.jfif"
+        }
+    ]
+    function getProduct()
+    {
+        let container = document.getElementById("container");
+        container.innerHTML = "";
+
+        products.forEach((val)=>
+        {
+            container.innerHTML+=`<div id="card1">
+                <img id="i" src="${val.img1}" alt="${val.pname}">
+                <h2>Product name:${val.pname}</h2>
+                <h2>Company name:${val.cname}</h2>
+                <h2>Price:${val.price}</h2>
+                </div>`;  
+
+        })
+    }
+    function getBook()
+    {
+        let container = document.getElementById("container");
+        container.innerHTML = "";
+        books.forEach((Val)=>
+    {
+        container.innerHTML+=`<div id="card1">
+                <img id="i" src="${Val.img2}" alt="${Val.pname}">
+                <h2>Book name:${Val.bname}</h2>
+                <h2>Author name:${Val.aname}</h2>
+                <h2>Price:${Val.bprice}</h2>
+                </div>`;  
+    })
+    }
+</script>
+</body>
+</html>

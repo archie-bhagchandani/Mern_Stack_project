@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio </title>
+    <!-- <link rel="stylesheet" href="./pro_style.css"> -->
+     <link rel="stylesheet" href="./p.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+</head>
+<body>
+
+    <nav class="navbar">
+         <!-- <div class="logo">AB <span>/ 2026</span></div> -->
+          <div></div>
+         <ul class="nav-links">
+            <li><a href="#box4">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <center>
+        <div id="box1">
+            <div id="box2">
+                <h1 class="heading"><b>Archie Bhagchandani</b></h1>
+                <h4 class="heading">Diploma Student | FrontEnd Developer </h4>       
+                <p>Phone no: +91 8193672789 <br>
+                Email id: archiebhagchandani@gamil.com<br>
+                I am passionate about building web pages using ChatBot Agent 
+                </p>
+             </div>
+
+            <div id="box3">
+                <img src="./pro.jpg" alt="photo" height="200" width="200" id="g1">
+            </div> 
+
+        </div>
+        <br>
+   
+<!-- <br><br><br><br> -->
+    <!-- <div id="box4"> -->
+        <div id="box4">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa-solid fa-address-card"></i>
+                    <br>
+                    <p><b>About Me</b><br>I'm Archie Bhagchandani,3rd year Diploma student <br>
+                    with strong intrest in web devlopmnet.<br>
+                    I enjoy turning ideas inot real world projects</p>
+                </td>
+
+                <td>
+                    <i class="fa-solid fa-school"></i>
+                    <br>
+                    <p><b>Eduction</b><br>3rd Year Diploma <br>Computer Engineering</p>
+                </td>
+
+                <td>
+                    <i class="fa-solid fa-language"></i>
+                    <br>
+                    <p><b>Languages</b></p>
+                   <ul>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Marathi</li>
+                    <li>Sindhi</li>
+                   </ul>                
+                </td>
+
+                <td>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <br>
+                    <p><b>Location</b><br>Pimpri-Chinchwad,<br>Pune</p>
+                </td>
+
+            </tr>
+        </table>
+        </div>
+        <br>
+    <div id="skills">
+        <h3>Skills </h3>
+        <center>
+        <table>
+        <tr>
+        
+        <td>
+        <p>FrontEnd</p>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-js"></i>
+        </td>
+
+        <td>
+        <p>BackEnd</p>
+        <i class="fa-brands fa-node"></i>
+        <i class="fa-solid fa-database"></i>
+        <i class="fa-brands fa-npm"></i>
+        </td>
+
+        <td>
+        <p>Tools</p>
+        <i class="fa-solid fa-code"></i>
+        <i class="fa-brands fa-git-alt"></i>
+        <i class="fa-brands fa-github"></i>
+        </td>
+
+        </tr>
+        </table>
+        </center>
+    </div>
+    <br>
+
+    <div id="projects">
+        <h3>Projects</h3>
+    <div class="project-grid">
+        <div class="project-card">
+            <img src="./flip.png" alt="flipkart">
+            <h4>FlipKart Clone</h4>
+            <p>A responsive e-commerce UI built using HTML, CSS and JS.</p>
+            <a href="./net.html">CClick to open the Website</a>
+        </div>
+        <div class="project-card">
+            <img src="./net.png" alt="netflix">
+            <h4>Netflix Clone</h4>
+            <p>A landing page replica focused on layout and styling practice.</p>
+            <a href="./flip.html">CClick to open the Website</a>
+        </div>
+        <div class="project-card">
+            <img src="./todo.png" alt="todoapp">
+            <h4>To DO APp</h4>
+            <p>A page where you can update or edit the task</p>
+            <a href="./todo.png">Click to open the Website</a>
+        </div>
+        <div class="project-card">
+            <img src="./otp.png" alt="OtP login">
+            <h4>Otp Login</h4>
+            <p>A landing page where wrong passcode leads to OTP login</p>
+            <a href="./otp_login.html">Clcick to open the Website</a>
+        </div>
+    </div>
+
+    </div>
+<br>
+    <div id="contact">
+        <h1>Contact Us</h1>
+        <input type="text" placeholder="Enter your name: " class="s">
+        <br>
+        <input type="email" placeholder="Enter your Email-ID: " class="s">
+        <br>
+        <input type="number" placeholder="Enter the mobile no: " class="s">
+        <button onclick="getSubmit()">Submit</button>
+        <div id="us">
+            <p>Name:Archie Bhagachandani<br>
+            Phone no: +91 8193672789 <br>
+            Email id: archiebhagchandani@gamil.com<br>
+            Address:Pimpri Pune     
+        </p>
+        <p id="msg"></p>
+        </div>
+
+    </div>
+  </center> 
+  <script>
+    let s=document.getElementById("s")
+    let msg=document.getElementById("msg")
+    function getSubmit()
+    {
+        msg.innerHTML="Form Submitted..";
+        msg.innerHTML="Will Contact You Soon...";
+        msg.innerHTML="Thanks For Contacting...!!!!"
+    }
+  </script>
+</body>
+</html>
+    

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <body style="background-color: aqua ;"></body>
+    <h1>Amazon Lite</h1>
+    <label for="">Enter product price:</label>
+    <input type="number" name="" id="price">
+    <br><br>
+    <label for="">nter product quantity:</label>
+    <input type="number" name="" id="qty"> 
+    <br><br>
+    <button onclick="getBill()">Bill</button>
+    <br><br>
+    <button onclick="getDisc1()">Appply 10%</button>
+    <button onclick="getDisc2()">Appply 20%</button>
+    <button onclick="getDisc3()">Appply 30%</button>
+    <h2 id="result"></h2>
+
+    <script>
+        var a=document.getElementById("price");
+        var b=document.getElementById("qty");
+        var c=document.getElementById("result");
+        let totbill=0;
+        let disc;
+        function getBill()
+        {
+            totbill=(price.value)*(qty.value);
+            result.innerHTML="Total Bill:"+totbill;
+            
+        }
+        function getDisc1()
+        {
+            if(totbill>1000)
+            {
+            disc=totbill*0.10;
+            result.innerHTML="The total bill :"+totbill+
+                            "<br>After applying 10 % dicount "+disc+
+                            "<br> The final total bill"+(totbill-disc);
+            }
+            else
+            {
+            alert("Added items worth"+(1000-totbill)+"to apply 10%");
+
+            }
+        }
+        function getDisc2()
+        {
+            if(totbill>5000)
+            {
+            disc=totbill*0.20;
+            result.innerHTML="The total bill :"+totbill+
+                            "<br>After applying 20 % dicount "+disc+
+                            "<br>The final total bill"+(totbill-disc);
+                 }
+            else
+            {
+            alert("Added items worth"+(5000-totbill)+"to apply 20%");
+
+            }
+        }
+        function getDisc3()
+        {
+            if(totbill>8000)
+            {
+            disc=totbill*0.30;
+            result.innerHTML="The total bill :"+totbill+
+                            "<br>After applying 30 % dicount "+disc+
+                            "<br> The final total bill"+(totbill-disc);
+            }
+            else
+            {
+            alert("Added items worth"+(8000-totbill)+"to apply 30%");
+
+            }
+        }
+
+
+    </script>
+</body>
+</html>

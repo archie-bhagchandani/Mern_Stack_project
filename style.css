@@ -1,0 +1,25 @@
+body{
+    background-color:mediumpurple;
+}
+#bg{
+    background-color: plum;
+    color: black;
+    width: 500px;
+    height: 400px;
+    border-radius: 20px;
+}
+button{
+    background-color: lavender;
+    color: black;
+}
+#box{
+    background-color: white;
+    color: black;
+}
+h1{
+    color: purple;
+    
+}
+#bg1{
+    color:purple;
+}

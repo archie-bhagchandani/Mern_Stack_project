@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archie Bhagchandani — Computer Engineering Diploma Student</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --blueprint:#0B3D62;
+    --blueprint-grid:#1F5C8B;
+    --paper:#F4F7FA;
+    --ink:#0B3D62;
+    --amber:#E8862F;
+    --text-light:#DCEAF5;
+    --text-dim:#85AECB;
+    --display: 'Space Grotesk', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --body: 'Inter', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--blueprint);
+    background-image:
+      linear-gradient(var(--blueprint-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--blueprint-grid) 1px, transparent 1px);
+    background-size: 36px 36px;
+    background-attachment: fixed;
+    color:var(--text-light);
+    font-family:var(--body);
+    line-height:1.6;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+
+  /* nav */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,61,98,0.85);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--blueprint-grid);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .nav-mark{font-family:var(--mono);font-weight:700;letter-spacing:1px;font-size:14px;color:var(--amber);}
+  .nav-links{display:flex;gap:28px;font-family:var(--mono);font-size:13px;color:var(--text-dim);}
+  .nav-links a:hover{color:var(--amber);}
+  @media(max-width:640px){.nav-links{gap:14px;font-size:11px;}}
+
+  /* hero / title block */
+  header.hero{padding:90px 0 70px;}
+  .eyebrow{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--amber);}
+  h1.name{font-family:var(--display);font-weight:700;font-size:clamp(38px,7vw,64px);line-height:1.05;color:#fff;letter-spacing:-1px;}
+  .role{font-family:var(--mono);font-size:16px;color:var(--text-dim);margin-top:14px;max-width:560px;}
+  .role .blink{color:var(--amber);}
+
+  .titleblock{
+    margin-top:56px;
+    border:1px solid var(--blueprint-grid);
+    background:rgba(244,247,250,0.04);
+  }
+  .titleblock-row{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--blueprint-grid);}
+  .titleblock-row:last-child{border-bottom:none;}
+  .tb-cell{padding:14px 18px;border-right:1px solid var(--blueprint-grid);}
+  .tb-cell:last-child{border-right:none;}
+  .tb-label{font-family:var(--mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+  .tb-value{font-family:var(--mono);font-size:13px;color:#fff;}
+  @media(max-width:700px){.titleblock-row{grid-template-columns:repeat(2,1fr);}}
+
+  section{padding:80px 0;border-top:1px solid var(--blueprint-grid);}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:40px;}
+  .sec-num{font-family:var(--mono);color:var(--amber);font-size:14px;}
+  .sec-title{font-family:var(--display);font-weight:600;font-size:28px;color:#fff;}
+  .sec-sub{font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-left:auto;}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
+  .about-text p{margin-bottom:16px;color:var(--text-light);font-size:15.5px;}
+  .about-text strong{color:var(--amber);font-weight:600;}
+  .stat-card{border:1px solid var(--blueprint-grid);padding:18px 20px;margin-bottom:14px;}
+  .stat-num{font-family:var(--display);font-size:26px;color:var(--amber);font-weight:700;}
+  .stat-label{font-family:var(--mono);font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+
+  /* skills - circuit trace */
+  .trace-list{display:flex;flex-direction:column;}
+  .trace-item{display:grid;grid-template-columns:140px 1fr;align-items:center;gap:18px;padding:14px 0;border-bottom:1px dashed var(--blueprint-grid);position:relative;}
+  .trace-item:last-child{border-bottom:none;}
+  .trace-name{font-family:var(--mono);font-size:13px;color:#fff;}
+  .trace-bar-bg{height:6px;background:rgba(255,255,255,0.06);position:relative;}
+  .trace-bar-fill{height:100%;background:linear-gradient(90deg,var(--amber),#ffb46b);}
+
+  /* projects */
+  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  @media(max-width:760px){.proj-grid{grid-template-columns:1fr;}}
+  .proj-card{border:1px solid var(--blueprint-grid);padding:24px;background:rgba(244,247,250,0.03);transition:border-color .2s, background .2s;}
+  .proj-card:hover{border-color:var(--amber);background:rgba(244,247,250,0.06);}
+  .proj-id{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:1px;}
+  .proj-title{font-family:var(--display);font-size:19px;color:#fff;font-weight:600;margin:8px 0 10px;}
+  .proj-desc{font-size:13.5px;color:var(--text-dim);margin-bottom:14px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{font-family:var(--mono);font-size:10.5px;border:1px solid var(--blueprint-grid);color:var(--text-dim);padding:3px 8px;}
+
+  /* experience */
+  .timeline{position:relative;padding-left:30px;}
+  .timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--blueprint-grid);}
+  .tl-item{position:relative;padding-bottom:32px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-dot{position:absolute;left:-30px;top:4px;width:11px;height:11px;border:2px solid var(--amber);background:var(--blueprint);}
+  .tl-role{font-family:var(--display);font-size:17px;color:#fff;font-weight:600;}
+  .tl-meta{font-family:var(--mono);font-size:11px;color:var(--amber);margin:4px 0 8px;text-transform:uppercase;letter-spacing:.5px;}
+  .tl-desc{font-size:14px;color:var(--text-dim);max-width:560px;}
+
+  /* contact */
+  .contact-box{border:1px solid var(--blueprint-grid);padding:48px;text-align:center;background:rgba(244,247,250,0.03);}
+  .contact-box h2{font-family:var(--display);font-size:30px;color:#fff;margin-bottom:14px;}
+  .contact-box p{font-family:var(--mono);font-size:13px;color:var(--text-dim);margin-bottom:28px;}
+  .contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .clink{font-family:var(--mono);font-size:13px;border:1px solid var(--amber);color:var(--amber);padding:10px 20px;transition:.2s;}
+  .clink:hover{background:var(--amber);color:var(--blueprint);}
+
+  footer{padding:30px 0;text-align:center;font-family:var(--mono);font-size:11px;color:var(--text-dim);border-top:1px solid var(--blueprint-grid);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="nav-mark">AB / 2026</span>
+    <div class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="eyebrow">DRAWING NO. AB-001 — STUDENT PORTFOLIO</div>
+  <h1 class="name">Archie Bhagchandani</h1>
+  <p class="role">Computer Engineering Diploma Student <span class="blink">//</span> Frontend Developer in training <span class="blink">//</span> Pune, India</p>
+
+  <div class="titleblock">
+    <div class="titleblock-row">
+      <div class="tb-cell"><div class="tb-label">Programme</div><div class="tb-value">MSBTE K-Scheme · Diploma CO</div></div>
+      <div class="tb-cell"><div class="tb-label">Status</div><div class="tb-value">3rd Year · Semester 5</div></div>
+      <div class="tb-cell"><div class="tb-label">Internship</div><div class="tb-value">Linkcode Technologies</div></div>
+      <div class="tb-cell"><div class="tb-label">Location</div><div class="tb-value">Pune, Maharashtra</div></div>
+    </div>
+    <div class="titleblock-row">
+      <div class="tb-cell"><div class="tb-label">Core Stack</div><div class="tb-value">HTML · CSS · JS</div></div>
+      <div class="tb-cell"><div class="tb-label">Learning</div><div class="tb-value">Git / GitHub · MERN</div></div>
+      <div class="tb-cell"><div class="tb-label">GitHub</div><div class="tb-value">archie-bhagchandani</div></div>
+      <div class="tb-cell"><div class="tb-label">Rev.</div><div class="tb-value">001 — 2026</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">About</span><span class="sec-sub">PROFILE</span></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a <strong>Computer Engineering diploma student</strong> currently in my final year, building practical frontend skills through a structured internship at <strong>Linkcode Technologies</strong> in Shivajinagar, Pune.</p>
+        <p>My approach is hands-on — I learn by building small, focused projects rather than just reading theory: layout systems, interactive UI logic, and now version control with Git and GitHub.</p>
+        <p>Currently working through the harder parts of frontend work — flexbox edge cases, icon library integration, and getting CSS to behave the way I actually intend it to.</p>
+      </div>
+      <div>
+        <div class="stat-card"><div class="stat-num">5th</div><div class="stat-label">Semester · MSBTE K-Scheme</div></div>
+        <div class="stat-card"><div class="stat-num">12 Wks</div><div class="stat-label">Internship · Linkcode Technologies</div></div>
+        <div class="stat-card"><div class="stat-num">6+</div><div class="stat-label">Projects Built During Internship</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Skills</span><span class="sec-sub">CURRENT LEVEL</span></div>
+    <div class="trace-list">
+      <div class="trace-item"><span class="trace-name">HTML / CSS</span><div class="trace-bar-bg"><div class="trace-bar-fill" style="width:75%"></div></div></div>
+      <div class="trace-item"><span class="trace-name">JavaScript (DOM)</span><div class="trace-bar-bg"><div class="trace-bar-fill" style="width:55%"></div></div></div>
+      <div class="trace-item"><span class="trace-name">Git / GitHub</span><div class="trace-bar-bg"><div class="trace-bar-fill" style="width:50%"></div></div></div>
+      <div class="trace-item"><span class="trace-name">Flexbox Layouts</span><div class="trace-bar-bg"><div class="trace-bar-fill" style="width:45%"></div></div></div>
+      <div class="trace-item"><span class="trace-name">MERN Basics</span><div class="trace-bar-bg"><div class="trace-bar-fill" style="width:30%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Projects</span><span class="sec-sub">INTERNSHIP BUILDS</span></div>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <div class="proj-id">PRJ-01</div>
+        <div class="proj-title">Netflix-style Landing Page</div>
+        <div class="proj-desc">A CSS-focused recreation of a streaming service layout — grid sections, hover states, responsive scaling.</div>
+        <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-id">PRJ-02</div>
+        <div class="proj-title">JS Chessboard</div>
+        <div class="proj-desc">An 8x8 board generated and laid out programmatically with JavaScript and CSS Grid.</div>
+        <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">CSS Grid</span></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-id">PRJ-03</div>
+        <div class="proj-title">Login Form with Lockout Logic</div>
+        <div class="proj-desc">A login UI that tracks failed attempts and temporarily locks out the user — basic client-side state handling.</div>
+        <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">Forms</span></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-id">PRJ-04</div>
+        <div class="proj-title">Dark Sign-In Card</div>
+        <div class="proj-desc">A dark-themed sign-in component with Font Awesome icons, built for clean visual hierarchy.</div>
+        <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Font Awesome</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Experience</span><span class="sec-sub">TIMELINE</span></div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-role">Frontend Development Intern</div>
+        <div class="tl-meta">Linkcode Technologies · Shivajinagar, Pune · Ongoing</div>
+        <div class="tl-desc">Hands-on HTML/CSS/JS practice through real build tasks, version control with Git/GitHub, and a presentation on Agile principles delivered to the team.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-role">MSBTE Diploma — Computer Engineering</div>
+        <div class="tl-meta">3rd Year · Semester 5 · K-Scheme</div>
+        <div class="tl-desc">Coursework spanning Operating Systems, Software Engineering, Entrepreneurship Development, and Advanced Computer Networks.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>Let's connect</h2>
+      <p>// open to internship and entry-level frontend opportunities</p>
+      <div class="contact-links">
+        <a class="clink" href="https://github.com/archie-bhagchandani" target="_blank"><i class="fa-brands fa-github"></i> GITHUB</a>
+        <a class="clink" href="mailto:youremail@example.com"><i class="fa-solid fa-envelope"></i> EMAIL</a>
+        <a class="clink" href="#" target="_blank"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">DRAWN BY ARCHIE BHAGCHANDANI — SCALE 1:1 — 2026</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="bg1">
+    <center>
+    <div id="bg">
+         <h1>To Do List Appp</h1>
+             <input type="text" name="" id="to" placeholder="Enter the task:">
+             <button onclick="toDo()">To Do The TAsk</button>
+        <div id="box">
+             <ul id="list"></ul>
+        </div>
+    </div>
+    </center>
+</div>
+    <script>
+        let arr=[];
+        let task=document.getElementById("to");
+        let list=document.getElementById("list");
+        function toDo(){
+            arr.push(task.value);
+            task.value="";
+            redo();
+        }
+        function redo()
+        {
+            list.innerHTML=""
+            for(let i=0;i<arr.length;i++)
+            {
+                list.innerHTML+="<li>"+arr[i]+
+               "<button onclick='todelete("+i+")'>Delete</button> "+
+               "<button onclick='toupdate("+i+")'>Update</button>"+
+               "<button "
+               "</li>";
+            }
+        }
+        function todelete(i)
+        {
+            arr.splice(i,1);
+            redo();
+        }
+  function toupdate(i)
+    {
+    let newTask=prompt("Edit Task",arr[i]);
+    if(newTask!=null && newTask!="")
+        {
+            arr[i]=newTask;
+        } 
+    redo();   
+    }
+
+    </script>
+</body>
+</html>

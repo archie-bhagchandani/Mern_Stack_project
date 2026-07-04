@@ -1,0 +1,37 @@
+#bg{
+    height: 400px;
+    width: 800px;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 250px;
+
+}
+#log{
+   height: 400px;
+   width: 250px;
+   background-color:#2874F0; 
+   color: white;
+   float: left;
+ }
+ #det{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-bottom: 12;
+    float: left;
+    padding: 40px 30px;
+ }
+ #det input {
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px;
+    color:blue
+}
+ button{
+            height: 30px;
+            width: 150px;
+            background-color: orangered;
+           color : white;
+        }
+

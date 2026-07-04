@@ -1,0 +1,148 @@
+body
+{
+    background-color: navy;
+    /* display: flex; */
+}
+#box1
+{
+    background-color: skyblue;
+    width: 800px;
+    height: 300px;
+    border-radius: 20px;
+    margin: auto;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+#box2
+{
+    color: black;
+}
+/* #box4{
+    color: black;
+    background-color: white;
+    width: 800px;
+    height: 200px;
+    border-radius: 20px;
+} */
+.heading
+{
+     color: black;
+}
+#g1{
+    border-radius: 50%;
+    border-color: black;
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+}
+#box3
+{
+    width: 200px;
+    height: 250px;
+    flex-shrink: 0; 
+    background-color: skyblue;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#b1
+{
+    background-color: white;
+    color: black;
+    height: 75px;
+    width: 200px;
+}
+i{
+    color: navy;
+    font-size: 40px;
+}
+#box4
+{
+    background-color:beige;
+    width: 800px;
+    height: 200px;
+    border-radius: 20px;
+
+}
+table
+{
+    background-color:beige;
+    color: black;
+    /* font-size: large; */
+    /* width: 800px;
+    height: 200px; */
+    /* display: flex; */
+    border-radius: 20px;
+    /* align-items: center;  */
+    /* align-items: center;  */
+    /* display: flex;
+    justify-content: space-between; */
+}
+/* td{
+    border: 1px solid black;
+} */
+#skills
+{
+    background-color: beige;
+    color: black;
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+     /* height: 100px;  */
+     padding: 15px;
+    /* align-items: center;  */
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 20px;
+    margin: 20px auto; 
+    
+}
+#c1
+{
+    background-color: rgb(6, 31, 112);
+}
+#projects
+{
+    background-color: beige;
+    width: 800px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#m1
+{
+ width: 200px;
+ height: 200px;
+}
+#m2
+{
+ width: 200px;
+ height: 200px;
+ 
+}
+#skills td
+{
+    border: none;         
+    padding: 15px;
+    text-align: center;    
+    vertical-align: top;
+    width: 33%;            
+}
+#skills i
+{
+    font-size: 35px;
+    color: navy;
+    margin: 5px;           
+}
+#box4 td {
+    border: 1px solid black;
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+}
