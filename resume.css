@@ -1,0 +1,192 @@
+/* ==========================================================
+   🎨 COLOR PALETTE — change these to re-theme the whole page
+   ========================================================== */
+:root {
+    --violet: #7209b7;
+    --pink:   #f72585;
+    --cyan:   #4361ee;
+    --teal:   #06d6a0;
+    --amber:  #ffb703;
+
+    --bg-1: #f5f3ff;
+    --bg-2: #e8f8f5;
+    --card-bg: #ffffff;
+
+    --text-main: #22223b;
+    --text-dim:  #4a4e69;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    margin: 0;
+    padding: 40px 20px;
+    color: var(--text-main);
+}
+
+/* ---------- TITLE ---------- */
+h1 {
+    color: #fff;
+    background: linear-gradient(90deg, var(--violet), var(--pink), var(--cyan));
+    background-size: 200% auto;
+    display: inline-block;
+    padding: 18px 50px;
+    border-radius: 50px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(114, 9, 183, 0.35);
+    animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+center {
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* ---------- TABLE SHELL ---------- */
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(114, 9, 183, 0.18);
+}
+
+table, th, td {
+    border: 1px solid #e6e1fa !important;
+}
+
+th, td {
+    padding: 18px 20px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+th u {
+    text-decoration: none;
+}
+
+/* ---------- SECTION LABELS — each row gets its own color ---------- */
+th {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    width: 140px;
+}
+
+tr:nth-child(1) th { background: linear-gradient(135deg, var(--cyan), #4895ef); }
+tr:nth-child(2) th { background: linear-gradient(135deg, var(--violet), #9d4edd); }
+tr:nth-child(3) th { background: linear-gradient(135deg, var(--pink), #ff8fab); }
+tr:nth-child(4) th { background: linear-gradient(135deg, var(--teal), #43e6b5); }
+
+/* ---------- PHOTO ---------- */
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid transparent;
+    background:
+        linear-gradient(#fff, #fff) padding-box,
+        conic-gradient(var(--violet), var(--pink), var(--amber), var(--cyan), var(--violet)) border-box;
+    box-shadow: 0 8px 24px rgba(114, 9, 183, 0.3);
+}
+
+/* ---------- LISTS (Skills, Personal Info, Project) ---------- */
+ul, ol {
+    margin: 6px 0;
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Top-level bullets: SQL / CORE-JAVA / WEB-TECH / Name / DOB / etc. */
+ul > li {
+    font-weight: 700;
+    color: var(--violet);
+}
+
+ul li::marker {
+    color: var(--pink);
+    font-size: 1.1em;
+}
+
+ol li::marker {
+    color: var(--cyan);
+    font-weight: 700;
+}
+
+/* nested <ol> items should read as normal body text, not bold headers */
+ol li {
+    font-weight: 400;
+    color: var(--text-dim);
+}
+
+ul > li > b {
+    color: var(--pink);
+}
+
+/* ---------- NESTED ACADEMICS TABLE ---------- */
+table table {
+    width: 100%;
+    margin: 4px 0 0;
+    border-radius: 10px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+table table th {
+    background: linear-gradient(135deg, var(--amber), #ffd166);
+    color: #7a4a00;
+    text-align: center;
+    width: auto;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+}
+
+table table td {
+    text-align: center;
+    padding: 12px;
+    color: var(--text-dim);
+}
+
+table table tr:nth-child(even) td {
+    background-color: #fbf9ff;
+}
+
+table table tr:hover td {
+    background-color: #f0ecff;
+    color: var(--text-main);
+}
+
+sup {
+    font-size: 0.7em;
+    color: var(--pink);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 700px) {
+    table, table th, table td {
+        display: block;
+        width: 100% !important;
+    }
+    h1 {
+        padding: 14px 28px;
+        font-size: 1.4rem;
+    }
+}
