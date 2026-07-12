@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archie's Scrapbook — Portfolio</title>
+<link rel="stylesheet" href="./w1.css">
+<link rel="stylesheet" href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#home" class="nav-brand"></a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </div>
+  <div class="nav-actions">
+    <a href="#contact" class="pill pill-outline">Say Hi</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-strip" aria-hidden="true">
+    <svg viewBox="0 0 40 60" class="cactus-svg" preserveAspectRatio="xMidYMax meet">
+      <rect x="16" y="20" width="8" height="38" rx="4" fill="#4f7a5b"/>
+      <rect x="4" y="30" width="7" height="18" rx="3.5" fill="#5c8c69"/>
+      <rect x="29" y="26" width="7" height="22" rx="3.5" fill="#5c8c69"/>
+      <ellipse cx="20" cy="14" rx="10" ry="8" fill="#6a9c76"/>
+      <circle cx="15" cy="12" r="1.4" fill="#3f6249"/>
+      <circle cx="24" cy="10" r="1.4" fill="#3f6249"/>
+      <circle cx="19" cy="17" r="1.4" fill="#3f6249"/>
+    </svg>
+  </div>
+
+  <div class="hero-title">
+    <h1 class="bubble-title" aria-label="Archie's">
+      <span>A</span><span>r</span><span>C</span><span>h</span><span>I</span><span>e</span>
+    </h1>
+    <h2 class="bubble-title bubble-sub" aria-label="Scrapbook">
+      <span>B</span><span>h</span><span>A</span><span>g</span><span>C</span><span>h</span><span>A</span><span>n</span><span>D</span><span>a</span>N<span>i</span><span></span>
+    </h2>
+  </div>
+
+  <div class="widget-card">
+    <div class="widget-thumb"><i class="fa-solid fa-code"></i></div>
+    <div class="widget-info">
+      <p class="widget-title">Latest build</p>
+      <p class="widget-sub">Square Flower — spiral animation</p>
+      <span class="widget-tag">Preview</span>
+    </div>
+    <a href="#projects" class="widget-play" aria-label="See projects"><i class="fa-solid fa-play"></i></a>
+  </div>
+
+  <p class="tap-hint">Tap to find more about me</p>
+  <svg class="hint-arrow" viewBox="0 0 60 60" aria-hidden="true">
+    <path d="M45 6 C 40 30, 25 40, 8 44" fill="none" stroke="#d98a3d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M18 34 L8 44 L20 47" fill="none" stroke="#d98a3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="photo-frame">
+    <img src="./a.png" alt="Archie Bhagchandani">
+    <span class="role-tag" id="typing"></span>
+  </div>
+
+  <div class="notes-cluster">
+    <a href="#projects" class="pin-note rotate-a">
+      <span class="pin"></span>
+      <span class="pin-note-title">Projects</span>
+      <span class="pin-note-sub">6 builds &amp; counting</span>
+    </a>
+
+    <a href="#resume" class="washi-note rotate-b">Resume<br>download</a>
+
+    <a href="#skills" class="pin-note rotate-c">
+      <span class="pin pin-green"></span>
+      <span class="pin-note-title">Toolkit</span>
+      <span class="pin-note-sub">HTML · CSS · JS</span>
+    </a>
+
+    <a href="#about" class="washi-note rotate-d">My<br>story!!!</a>
+  </div>
+
+  <svg class="fan-decor" viewBox="0 0 200 200" aria-hidden="true">
+    <g transform="translate(200,0)">
+      <path d="M0,0 L-200,0 A200,200 0 0 1 0,200 Z" fill="#c1443a" opacity="0"/>
+      <g stroke="#c1443a" stroke-width="7">
+        <path d="M0,0 L-190,0"/><path d="M0,0 L-178,-55" transform="rotate(90 0 0)"/>
+      </g>
+    </g>
+  </svg>
+  <svg class="flower-decor" viewBox="0 0 160 160" aria-hidden="true">
+    <g transform="translate(80,80)">
+      <g fill="#e8b64c">
+        <ellipse cx="0" cy="-55" rx="16" ry="30"/>
+        <ellipse cx="39" cy="-39" rx="16" ry="30" transform="rotate(45)"/>
+        <ellipse cx="55" cy="0" rx="16" ry="30" transform="rotate(90)"/>
+        <ellipse cx="39" cy="39" rx="16" ry="30" transform="rotate(135)"/>
+        <ellipse cx="0" cy="55" rx="16" ry="30" transform="rotate(180)"/>
+        <ellipse cx="-39" cy="39" rx="16" ry="30" transform="rotate(225)"/>
+        <ellipse cx="-55" cy="0" rx="16" ry="30" transform="rotate(270)"/>
+        <ellipse cx="-39" cy="-39" rx="16" ry="30" transform="rotate(315)"/>
+      </g>
+      <circle r="26" fill="#7a4a2b"/>
+    </g>
+  </svg>
+
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</header>
+
+<main>
+
+  <section id="about" class="page reveal">
+    <p class="page-tape">About ME</p>
+    <h2 class="page-title">who's behind the screen</h2>
+
+    <div class="journal-grid">
+      <div class="journal-card rotate-a">
+        <span class="tape tape-blue"></span>
+        <i class="fa-solid fa-user"></i>
+        <h4>Who I Am</h4>
+        <p>I'm Archie Bhagchandani, a passionate Front-End Developer and Computer Engineering diploma student with a strong interest in building responsive, user-friendly, and visually appealing web applications. I enjoy transforming ideas into real-world projects through clean code, modern UI design, and continuous learning.</p>
+      </div>
+      <div class="journal-card rotate-b">
+        <span class="tape tape-pink"></span>
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h4>Education</h4>
+        <p>Third-Year Diploma in Computer Engineering with a strong interest in Front-End Development, UI Design, and JavaScript.</p>
+      </div>
+      <div class="journal-card rotate-c">
+        <span class="tape tape-yellow"></span>
+        <i class="fa-solid fa-code"></i>
+        <h4>What I Do</h4>
+        <p>I build responsive websites, clone real-world applications, and create interactive projects using HTML, CSS, JavaScript, and modern web technologies.</p>
+      </div>
+      <div class="journal-card rotate-d">
+        <span class="tape tape-green"></span>
+        <i class="fa-solid fa-location-dot"></i>
+        <h4>Location</h4>
+        <p>Pimpri-Chinchwad, Pune, Maharashtra, India</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="page reveal">
+    <p class="page-tape">・゜・Skills・゜・</p>
+    <h2 class="page-title">stickers I've earned so far</h2>
+
+    <div class="stamp-groups">
+      <div class="stamp-group">
+        <p class="stamp-label">Front-End</p>
+        <div class="stamp-row">
+          <span class="stamp stamp-orange"><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="stamp stamp-blue"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="stamp stamp-yellow"><i class="fa-brands fa-js"></i> JavaScript</span>
+        </div>
+      </div>
+      <div class="stamp-group">
+        <p class="stamp-label">Back-End</p>
+        <div class="stamp-row">
+          <span class="stamp stamp-green"><i class="fa-brands fa-node"></i> Node.js</span>
+          <span class="stamp stamp-pink"><i class="fa-solid fa-database"></i> Database</span>
+          <span class="stamp stamp-red"><i class="fa-brands fa-npm"></i> NPM</span>
+        </div>
+      </div>
+      <div class="stamp-group">
+        <p class="stamp-label">Tools</p>
+        <div class="stamp-row">
+          <span class="stamp stamp-purple"><i class="fa-solid fa-code"></i> VS Code</span>
+          <span class="stamp stamp-orange"><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="stamp stamp-blue"><i class="fa-brands fa-github"></i> GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="page reveal">
+    <p class="page-tape">・゜・Projects・゜・</p>
+    <h2 class="page-title">pages torn from my sketchbook</h2>
+
+    <div class="polaroid-grid">
+
+      <a href="./net.html" class="polaroid rotate-a">
+        <span class="tape tape-blue"></span>
+        <img src="./flip.png" alt="flipkart">
+        <p class="polaroid-caption">FlipKart Clone<br><span>e-commerce UI · HTML/CSS/JS</span></p>
+      </a>
+
+      <a href="./flip.html" class="polaroid rotate-b">
+        <span class="tape tape-pink"></span>
+        <img src="./net.png" alt="netflix">
+        <p class="polaroid-caption">Netflix Clone<br><span>landing page replica</span></p>
+      </a>
+
+      <a href="./todo.png" class="polaroid rotate-c">
+        <span class="tape tape-yellow"></span>
+        <img src="./todo.png" alt="todoapp">
+        <p class="polaroid-caption">To-Do App<br><span>update &amp; edit tasks</span></p>
+      </a>
+
+      <a href="./otp_login.html" class="polaroid rotate-d">
+        <span class="tape tape-green"></span>
+        <img src="./otp.png" alt="OTP login">
+        <p class="polaroid-caption">OTP Login<br><span>wrong passcode → OTP flow</span></p>
+      </a>
+
+      <a href="./emoji.html" class="polaroid rotate-b">
+        <span class="tape tape-blue"></span>
+        <img src="./emoji.png" alt="Emoji">
+        <p class="polaroid-caption">Emoji<br><span>simple emoji display page</span></p>
+      </a>
+
+      <a href="./square.html" class="polaroid rotate-a">
+        <span class="tape tape-pink"></span>
+        <img src="./flower.png" alt="Square flower">
+        <p class="polaroid-caption">Square Flower<br><span>geometric spiral animation</span></p>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="contact" class="page reveal">
+    <p class="page-tape">Contact</p>
+    <h2 class="page-title">leave a note in my mailbox</h2>
+
+    <div class="mail-grid">
+
+      <div class="postcard">
+        <span class="tape tape-yellow"></span>
+        <p class="postcard-line"><i class="fa-solid fa-pen"></i> Name</p>
+        <input type="text" placeholder="Your name" class="s">
+        <p class="postcard-line"><i class="fa-solid fa-pen"></i> Email</p>
+        <input type="email" placeholder="Your email" class="s">
+        <p class="postcard-line"><i class="fa-solid fa-pen"></i> Phone</p>
+        <input type="number" placeholder="Your mobile no." class="s">
+        <button onclick="getSubmit()">Send it off</button>
+        <p id="msg"></p>
+      </div>
+      <div class="postcard postcard-info">
+        <span class="tape tape-green"></span>
+        <p class="postcard-heading">reach me directly</p>
+        <p><i class="fa-solid fa-user"></i> Archie Bhagchandani</p>
+        <p><i class="fa-solid fa-phone"></i> +91 81936 72789</p>
+        <p><i class="fa-solid fa-envelope"></i> archiebhagchandani@gamil.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Pimpri, Pune, Maharashtra, India</p>
+        <p class="postcard-note">always up for a good project</p>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <p>made with a lot of tape &amp; a little css · <span id="year"></span></p>
+    </footer>
+  </section>
+</main>
+
+<script>
+const words = ["Front-End Developer", "MERN Stack Developer", "Back-End Developer", "Web Developer"];
+let wordIndex = 0, charIndex = 0, isDeleting = false;
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+  if (!isDeleting) {
+    typingElement.textContent = currentWord.substring(0, charIndex++);
+    if (charIndex > currentWord.length) { isDeleting = true; setTimeout(typeEffect, 1200); return; }
+  } else {
+    typingElement.textContent = currentWord.substring(0, charIndex--);
+    if (charIndex < 0) { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; }
+  }
+  setTimeout(typeEffect, isDeleting ? 55 : 110);
+}
+typeEffect();
+
+const revealEls = document.querySelectorAll(".reveal");
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+function getSubmit() {
+  const msg = document.getElementById("msg");
+  msg.textContent = "✓ note delivered — I'll write back soon!";
+  msg.classList.add("msg-success");
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

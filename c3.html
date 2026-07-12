@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="./c3.css">
+<link rel="stylesheet" href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="nav">
+  <div class="nl">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="home" id="home">
+  <div class="hw">
+    <div class="hl">
+      <svg class="arrow" viewBox="0 0 120 90">
+        <path d="M10,80 Q40,10 110,20" />
+        <path d="M92,10 L112,20 L96,34" fill="none" />
+      </svg>
+      <p class="tapclick">Click here to know About Me</p>
+      <a href="#about" class="pb">
+        <img src="./a.png" alt="myphoto" class="mp">
+        <span class="rt" id="typing"></span>
+      </a>
+    </div>
+    <div class="hr">
+      <h1 class="t1 rvl" style="--i:0">Archie</h1>
+      <h1 class="t2 rvl" style="--i:1">Bhagchandani</h1>
+      <div class="nb">
+        <a href="#projects" class="n2" style="--i:2">Projects<br><span>6 builds so far</span></a>
+        <a href="#about" class="n5" style="--i:3">My<br>story!!!</a>
+        <a href="#projects" class="n2" style="--i:2">Work Done So Far</span></a>
+        <a href="#contact" class="n2" style="--i:4">Contact Me</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about" id="about">
+  <p class="tt">About Me</p>
+  <div class="ag">
+    <div class="c1">
+      <i class="fa-solid fa-user"></i>
+      <h4>My story</h4>
+      <p>I'm Archie Bhagchandani, a passionate Front End Developer,I have keen intrest to known more about Chatbot Agents  and 
+        Computer Engineering diploma student with a strong interest in building responsive, user-friendly, and visually appealing 
+        web applications.</p>
+    </div>
+    <div class="c2">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <h4>Education</h4>
+      <p>Third-Year Diploma in Computer Engineering with a strong interest in Front End Development, UI Design, and JavaScript.</p>
+    </div>
+    <div class="c3">
+      <i class="fa-solid fa-code"></i>
+      <h4>Learnt so far</h4>
+      <p>I build responsive websites, clone real world applications, and create interactive projects using HTML, CSS, JavaScript, and modern web technologies.</p>
+    </div>
+  </div>
+</div>
+
+<div class="projects" id="projects">
+  <p class="tt">Projects</p>
+  <div class="pg">
+
+    <a href="./net.html" class="pcard">
+      <span class="pbadge">Completed</span>
+      <img src="./flip.png" alt="flipkart">
+      <p class="pcap">FlipKart Clone<br><span>e-commerce UI · HTML/CSS/JS</span></p>
+    </a>
+    <a href="./flip.html" class="pcard">
+      <span class="pbadge">Completed</span>
+      <img src="./net.png" alt="netflix">
+      <p class="pcap">Netflix Clone<br><span>landing page replica</span></p>
+    </a>
+    <a href="./todo.png" class="pcard">
+      <span class="pbadge">Completed</span>
+      <img src="./todoApp.png" alt="todoapp">
+      <p class="pcap">To-Do App<br><span>update the task and add the tasks</span></p>
+    </a>
+
+    <a href="./otp_login.html" class="pcard">
+      <span class="pbadge">Completed</span>
+      <img src="./otp.png" alt="OtP login">
+      <p class="pcap">OTP Login<br><span>wrong passcode to OTP flow</span></p>
+    </a>
+
+    <a href="./emoji.html" class="pcard">
+      <span class="pbadge">Completed</span>
+      <img src="./emoji.png" alt="Emoji">
+      <p class="pcap">Emoji<br><span>Simple emoji display page</span></p>
+    </a>
+
+    <a href="./square.html" class="pcard">
+      <span class="pbadge">Completed</span>
+      <img src="./flower.png" alt="Square flower">
+      <p class="pcap">Square Flower<br><span>Geometric spiral animation . It is done using CSS magic</span></p>
+    </a>
+  </div>
+</div>
+
+<div class="contact" id="contact">
+  <p class="tt">Contact Me</p>
+  <div class="cg">
+    <div class="frm">
+      <p>Name:</p>
+      <input type="text" placeholder="Enter your name: " class="s">
+      <p>Email:</p>
+      <input type="email" placeholder="Enter your Email-ID: " class="s">
+      <p>Phone No:</p>
+      <input type="number" placeholder="Enter the mobile no: " class="s">
+      <button onclick="getSubmit()">Send it off</button>
+      <p id="msg"></p>
+    </div>
+
+    <div class="info">
+      <p class="ih">Reach me Directly</p>
+      <p><i class="fa-solid fa-user"></i> Archie Bhagchandani</p>
+      <p><i class="fa-solid fa-phone"></i> +91 81936 72789</p>
+      <p><i class="fa-solid fa-envelope"></i> archiebhagchandani@gamil.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const words = ["Front-End Developer", "MERN Stack Developer", "Back-End Developer", "Web Developer"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (!isDeleting) {
+    typingElement.textContent = currentWord.substring(0, charIndex++);
+    if (charIndex > currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    typingElement.textContent = currentWord.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      wordIndex++;
+      if (wordIndex == words.length) {
+        wordIndex = 0;
+      }
+    }
+  }
+  setTimeout(typeEffect, isDeleting ? 60 : 120);
+}
+typeEffect();
+
+function getSubmit() {
+  document.getElementById("msg").textContent = "note delivered - I'll write back soon!";
+  document.getElementById("msg").style.opacity = 1;
+}
+
+const boxes = document.querySelectorAll(".about, .projects, .contact");
+const obs = new IntersectionObserver(function(items){
+  items.forEach(function(item){
+    if (item.isIntersecting) {
+      item.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.15 });
+boxes.forEach(function(box){ obs.observe(box); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archie's Scrapbook</title>
+<link rel="stylesheet" href="./c2.css">
+<link rel="stylesheet" href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="nav">
+  <div class="nl">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="home" id="home">
+  <div class="hw">
+
+    <div class="hl">
+      <div class="pb">
+        <img src="./a.png" alt="myphoto" class="mp">
+        <span class="rt" id="typing"></span>
+      </div>
+    </div>
+
+    <div class="hr">
+      <h1 class="t1">Archie's</h1>
+      <h1 class="t2">Bhagchandani</h1>
+
+      <div class="nb">
+        <a href="#projects" class="n2">Projects<br><span>6 builds so far</span></a>
+        <a href="#about" class="n5">My<br>story!!!</a>
+        <a href="#contact" class="n2">Contact Me</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about" id="about">
+  <p class="tt">About Me</p>
+  
+  <div class="ag">
+    <div class="c1">
+      <i class="fa-solid fa-user"></i>
+      <h4>My story</h4>
+      <p>I'm Archie Bhagchandani,a passionate FronTEnd Developer and Computer Engineering diploma student with a strong interest in building responsive, user-friendly, and visually appealing web applications.</p>
+    </div>
+    <div class="c2">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <h4>Education</h4>
+      <p>Third-Year Diploma in Computer Engineering with a strong interest in Front End Development,UI Design,and JavaScript.</p>
+    </div>
+    <div class="c3">
+      <i class="fa-solid fa-code"></i>
+      <h4>LearNt so far</h4>
+      <p>I build responsive websites, clone real world applications, and create interactive projects using HTML, CSS, JavaScript, and modern web technologies.</p>
+    </div>
+    <div class="c4">
+      <i class="fa-solid fa-location-dot"></i>
+      <h4>Location</h4>
+      <p>Pune, Maharashtra, India</p>
+    </div>
+  </div>
+</div>
+
+<div class="projects" id="projects">
+  <p class="tt">Projects</p>
+  <div class="pg">
+
+    <a href="./net.html" class="pcard">
+      <img src="./flip.png" alt="flipkart">
+      <p class="pcap">FlipKart Clone<br><span>e-commerce UI · HTML/CSS/JS</span></p>
+    </a>
+
+    <a href="./flip.html" class="pcard">
+      <img src="./net.png" alt="netflix">
+      <p class="pcap">Netflix Clone<br><span>landing page replica</span></p>
+    </a>
+
+    <a href="./todo.png" class="pcard">
+      <img src="./todoApp.png" alt="todoapp">
+      <p class="pcap">To-Do App<br><span>update &amp; edit tasks</span></p>
+    </a>
+
+    <a href="./otp_login.html" class="pcard">
+      <img src="./otp.png" alt="OtP login">
+      <p class="pcap">OTP Login<br><span>wrong passcode to OTP flow</span></p>
+    </a>
+
+    <a href="./emoji.html" class="pcard">
+      <img src="./emoji.png" alt="Emoji">
+      <p class="pcap">Emoji<br><span>simple emoji display page</span></p>
+    </a>
+
+    <a href="./square.html" class="pcard">
+      <img src="./flower.png" alt="Square flower">
+      <p class="pcap">Square Flower<br><span>geometric spiral animation</span></p>
+    </a>
+
+  </div>
+</div>
+
+<div class="contact" id="contact">
+  <p class="tt">Contact Me </p>
+
+  <div class="cg">
+
+    <div class="frm">
+      <p>Name:</p>
+      <input type="text" placeholder="Enter your name: " class="s">
+      <p>Email:</p>
+      <input type="email" placeholder="Enter your Email-ID: " class="s">
+      <p>Phone No:</p>
+      <input type="number" placeholder="Enter the mobile no: " class="s">
+      <button onclick="getSubmit()">Send it off</button>
+      <p id="msg"></p>
+    </div>
+
+    <div class="info">
+      <p class="ih">Reach me Directly</p>
+      <p><i class="fa-solid fa-user"></i> Archie Bhagchandani</p>
+      <p><i class="fa-solid fa-phone"></i> +91 81936 72789</p>
+      <p><i class="fa-solid fa-envelope"></i> archiebhagchandani@gamil.com</p>
+      <p><i class="fa-solid fa-location-dot"></i>Pune, Maharashtra, India</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const words = ["Front-End Developer", "MERN Stack Developer", "Back-End Developer", "Web Developer"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById("typing");
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (!isDeleting) {
+    typingElement.textContent = currentWord.substring(0, charIndex++);
+    if (charIndex > currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    typingElement.textContent = currentWord.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      wordIndex++;
+      if (wordIndex == words.length) {
+        wordIndex = 0;
+      }
+    }
+  }
+  setTimeout(typeEffect, isDeleting ? 60 : 120);
+}
+typeEffect();
+
+function getSubmit() {
+  document.getElementById("msg").textContent = "note delivered - I'll write back soon!";
+  document.getElementById("msg").style.opacity = 1;
+}
+</script>
+
+</body>
+</html>
